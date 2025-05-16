@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism CSS Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="generator-container">
+        <div class="preview-container">
+            <div id="previewBox"></div>
+        </div>
+        <div class="controls-container">
+            <h1>Neumorphism</h1>
+            <div class="control-group">
+                <label for="backgroundColor">Background</label>
+                <input type="color" id="backgroundColor" value="#e0e0e0">
+            </div>
+            <div class="control-group">
+                <label>Type</label>
+                <div class="type-selector">
+                    <button type="button" data-type="convex" class="type-button active">Convex</button>
+                    <button type="button" data-type="depressed" class="type-button">Depressed</button>
+                    <button type="button" data-type="flat" class="type-button">Flat</button>
+                    <button type="button" data-type="none" class="type-button">None</button>
+                    <input type="hidden" id="neumorphismType" value="convex">
+                </div>
+            </div>
+            <div class="param-group">
+                <div class="control-row">
+                    <div class="control-item">
+                        <label for="distance">Distance</label>
+                        <input type="number" id="shadowDistance" value="8">
+                    </div>
+                    <div class="control-item">
+                        <label for="blur">Blur</label>
+                        <input type="number" id="shadowBlur" value="12">
+                    </div>
+                </div>
+                <div class="control-row">
+                    <div class="control-item">
+                        <label for="strength">Strength</label>
+                        <input type="number" id="shadowStrength" value="2">
+                    </div>
+                    <div class="control-item">
+                        <label for="radius">Radius</label>
+                        <input type="number" id="borderRadius" value="10">
+                    </div>
+                </div>
+                <div class="control-row">
+                    <div class="control-item">
+                        <label for="height">Height</label>
+                        <input type="number" id="height" value="120">
+                    </div>
+                    <div class="control-item">
+                        <label for="width">Width</label>
+                        <input type="number" id="width" value="180">
+                    </div>
+                </div>
+            </div>
+            <div class="output-container">
+                <textarea id="cssOutput" rows="8" readonly></textarea>
+                <button id="copyButton">Copy CSS</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
